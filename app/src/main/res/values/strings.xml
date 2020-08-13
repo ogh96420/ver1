@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">다해줄게</string>
+    <string name="title_eventpop">다줄톡톡</string>
+    <string name="title_home">홈</string>
+    <string name="title_talk">상담채팅</string>
+    <string name="title_info">My다줄</string>
+    <string name="title_activity_astetic">AsteticActivity</string>
+    <string name="title_activity_eyebrow">EyebrowActivity</string>
+    <string name="title_activity_indesigner">InterdesignerActivity</string>
+    <string name="title_activity_reservation">ReservationActivity</string>
+    <string name="title_activity_inshop">ReservationActivity</string>
+    <string name="title_activity_recently">ReservationActivity</string>
+    <string name="title_activity_chat">ReservationActivity</string>
+
+
+</resources>
