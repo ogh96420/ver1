@@ -86,8 +86,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="410dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="45dp"
+        android:layout_height="728dp"
         android:text="  정렬"
         android:textSize="30dp"
         android:textStyle="bold"

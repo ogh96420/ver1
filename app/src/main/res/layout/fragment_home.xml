@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="-37dp"
+        tools:layout_editor_absoluteY="76dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="830dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#ffffff">
 
             <TextView
                 android:id="@+id/text_home"
@@ -29,27 +33,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <SearchView
-                android:id="@+id/search_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-            </SearchView>
-
             <ImageButton
                 android:id="@+id/btn_ast"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="190dp"
+                android:background="#ffffff"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ast"
-                android:background="#ffffff"/>
+                app:srcCompat="@drawable/ast2" />
 
             <ImageButton
                 android:id="@+id/btn_wax"
@@ -57,10 +50,10 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="190dp"
+                android:background="#ffffff"
                 app:layout_constraintStart_toEndOf="@+id/btn_nail"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/wax"
-                android:background="#ffffff"/>
+                app:srcCompat="@drawable/wax" />
 
             <ImageButton
                 android:id="@+id/btn_nail"
@@ -68,10 +61,10 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="190dp"
+                android:background="#ffffff"
                 app:layout_constraintStart_toEndOf="@+id/btn_half"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/nail"
-                android:background="#ffffff"/>
+                app:srcCompat="@drawable/nail" />
 
             <ImageButton
                 android:id="@+id/btn_half"
@@ -79,10 +72,10 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="190dp"
+                android:background="#ffffff"
                 app:layout_constraintStart_toEndOf="@+id/btn_ast"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/makeup"
-                android:background="#ffffff"/>
+                app:srcCompat="@drawable/makeup" />
 
             <ImageButton
                 android:id="@+id/btn_in"
@@ -90,23 +83,24 @@
                 android:layout_height="65dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="190dp"
+                android:background="#ffffff"
                 app:layout_constraintStart_toEndOf="@+id/btn_wax"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/in"
-                android:background="#ffffff"/>
+                app:srcCompat="@drawable/in" />
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/search_button"
+                app:layout_constraintTop_toBottomOf="@+id/text_home"
                 app:srcCompat="@drawable/movie1" />
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
+                android:id="@+id/tab_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="150dp"
@@ -123,7 +117,7 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="반영구" />
+                    android:text="메이크업" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
@@ -142,8 +136,32 @@
 
             </com.google.android.material.tabs.TabLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_vw"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:layout_marginTop="2dp"
+                android:background="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tab_home">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/tab_View"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                </androidx.viewpager.widget.ViewPager>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
-                android:id="@+id/ohgihwan"
+                android:id="@+id/oh.."
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="77dp"
@@ -155,14 +173,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <FrameLayout
-        android:id="@+id/frameLayout_home"
-        android:layout_width="405dp"
-        android:layout_height="579dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
