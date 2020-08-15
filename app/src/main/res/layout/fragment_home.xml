@@ -27,9 +27,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="다줄"
-                android:textAlignment="center"
-                android:textSize="30sp"
+                android:text="다해줄게"
+                android:textSize="35sp"
+                android:textColor="#ff6f61"
+                android:fontFamily="@font/bazzi"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -156,8 +157,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0">
-
                 </androidx.viewpager.widget.ViewPager>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -170,6 +171,76 @@
                 android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_wax" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="에스테틱"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_ast" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="메이크업"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView14"
+                app:layout_constraintTop_toBottomOf="@+id/btn_half" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="네일아트"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/btn_nail" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="왁싱"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/btn_wax" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/bazzi"
+                android:gravity="center"
+                android:text="속눈썹"
+                android:textColor="#ff6f61"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/btn_in" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
