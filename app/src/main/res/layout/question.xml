@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.Admin.QuestionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="고객문의"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <ExpandableListView
+        android:id="@+id/eListView"
+        android:layout_width="match_parent"
+        android:layout_height="308dp"
+        android:layout_marginTop="150dp"
+        android:layoutDirection="rtl">
+
+    </ExpandableListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="다른 문의 이메일: sky1298@naver.com"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="고객센터 문의 02-1251-2422"/>
+
+
+</LinearLayout>
