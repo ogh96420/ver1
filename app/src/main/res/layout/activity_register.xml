@@ -90,4 +90,5 @@
         android:text="중복체크"
         app:layout_constraintStart_toEndOf="@+id/et_id"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
