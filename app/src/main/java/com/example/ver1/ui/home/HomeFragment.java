@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.ver1.R;
+import com.example.ver1.ui.Admin.AdminActivity;
 import com.example.ver1.ui.home.Astetic.AsteticActivity;
 import com.google.android.material.tabs.TabLayout;
 
@@ -26,6 +28,7 @@ import java.util.List;
 public class HomeFragment extends Fragment {
 
     private View view;
+    private ImageButton btn_admin;
     private ImageButton btn1;
     private ImageButton btn2;
     private ImageButton btn3;
@@ -54,6 +57,15 @@ public class HomeFragment extends Fragment {
         btn3 = view.findViewById(R.id.btn_nail);
         btn4 = view.findViewById(R.id.btn_wax);
         btn5 = view.findViewById(R.id.btn_in);
+        btn_admin = view.findViewById(R.id.btn_admin);
+
+        btn_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getActivity() , AdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
