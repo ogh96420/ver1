@@ -11,15 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        tools:layout_editor_absoluteX="-37dp"
-        tools:layout_editor_absoluteY="76dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="830dp"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="#ffffff">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/text_home"
@@ -27,10 +28,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="다해줄게"
-                android:textSize="35sp"
-                android:textColor="#ff6f61"
                 android:fontFamily="@font/bazzi"
+                android:text="다해줄게"
+                android:textColor="#ff6f61"
+                android:textSize="35sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -108,7 +109,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_wax">
+                app:layout_constraintTop_toBottomOf="@+id/btn_wax"
+                app:tabIndicatorColor="#ff6f61"
+                app:tabIndicatorFullWidth="false"
+                app:tabSelectedTextColor="#ff6f61">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
@@ -140,10 +144,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_vw"
                 android:layout_width="match_parent"
-                android:layout_height="550dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:background="#ffffff"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tab_home">
 
@@ -156,21 +159,9 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0">
-                </androidx.viewpager.widget.ViewPager>
+                    app:layout_constraintVertical_bias="1.0"></androidx.viewpager.widget.ViewPager>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/oh.."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="77dp"
-                android:layout_marginTop="69dp"
-                android:text="최근본업체 삽입부분"
-                android:textSize="30sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_wax" />
 
             <TextView
                 android:id="@+id/textView14"

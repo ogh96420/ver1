@@ -9,11 +9,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ver1.R;
 import com.example.ver1.ui.home.Shop.HomeAdapter;
+import com.example.ver1.ui.home.Shop.RecyclerViewDecoration;
 import com.example.ver1.ui.home.Shop.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,7 +30,7 @@ public class AestheticFragment extends Fragment {
     private View view;
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    GridLayoutManager layoutManager;
     private ArrayList<HomeUser> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
@@ -45,8 +47,10 @@ public class AestheticFragment extends Fragment {
         view = inflater.inflate(R.layout.tabitem_aesthetic, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_home); // 아디 연결
         recyclerView.setHasFixedSize(true); // 리사이클러뷰 기존성능 강화
-        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager = new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new RecyclerViewDecoration(25)); // 리사이클러뷰데코레이션 클래스에서 간격주기수정
+
         arrayList = new ArrayList<>(); // User 객체를 담을 어레이 리스트 (어댑터쪽으로)
 
         database = FirebaseDatabase.getInstance(); // 파이어베이스 데이터베이스 연동
