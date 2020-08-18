@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.home.Shop.ShopActivity"></activity>
+        <activity android:name=".ui.login.LoginActivity"></activity>
+        <activity android:name=".ui.login.RegisterActivity"></activity>
+        <activity android:name=".ui.Admin.AdminActivity"></activity>
+        <activity android:name=".ui.Admin.ConfigActivity"></activity>
+        <activity android:name=".ui.Admin.UpdateActivity"></activity>
+        <activity android:name=".ui.Admin.Openbook"></activity>
+        <activity android:name=".ui.Admin.QuestionActivity"></activity>
         <activity
             android:name=".ui.home.EyeBrow.EyebrowActivity"
             android:label="@string/title_activity_eyebrow"
